@@ -1,7 +1,7 @@
-public class Animal {
-    private String name;
-    private String species;
-    private int age;
+public abstract class Animal {
+    protected String name;
+    protected String species;
+    protected int age;
 
     public Animal(String name, String species, int age) {
         this.name = name;
@@ -42,4 +42,6 @@ public class Animal {
         System.out.println("Ім'я: " + name);
         System.out.println("Вік: " + age);
     }
+
+    public abstract void showRecommendations();
 }
