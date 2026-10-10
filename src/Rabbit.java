@@ -1,28 +1,9 @@
-public class Rabbit {
-    private String name;
-    private int age;
+public class Rabbit extends Animal {
     private boolean vaccinated;
 
     public Rabbit(String name, int age, boolean vaccinated) {
-        this.name = name;
-        this.age = age;
+        super(name, "Кролик", age);
         this.vaccinated = vaccinated;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public boolean isVaccinated() {
@@ -33,14 +14,19 @@ public class Rabbit {
         this.vaccinated = vaccinated;
     }
 
+    @Override
     public void showInfo() {
-        System.out.println("Тварина: Кролик");
-        System.out.println("Ім'я: " + name);
-        System.out.println("Вік: " + age);
+        super.showInfo();
         if (vaccinated) {
             System.out.println("Вакцинація: Провакциновано");
         } else {
             System.out.println("Вакцинація: Відсутня");
         }
+    }
+
+    @Override
+    public void showRecommendations() {
+        System.out.println("Рекомендації: Кролику обов'язково потрібен просторий вольєр та " +
+                "будиночок-схованка з двома виходами");
     }
 }

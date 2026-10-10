@@ -1,28 +1,9 @@
-public class Dog {
-    private String name;
-    private int age;
+public class Dog extends Animal {
     private String breed;
 
     public Dog(String name, int age, String breed) {
-        this.name = name;
-        this.age = age;
+        super(name, "Собака", age);
         this.breed = breed;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getBreed() {
@@ -33,10 +14,15 @@ public class Dog {
         this.breed = breed;
     }
 
+    @Override
     public void showInfo() {
-        System.out.println("Тварина: Собака");
-        System.out.println("Ім'я: " + name);
-        System.out.println("Вік: " + age);
+        super.showInfo();
         System.out.println("Порода: " + breed);
+    }
+
+    @Override
+    public void showRecommendations() {
+        System.out.println("Рекомендації: Обов'язкові щоденні прогулянки, використання для прогулянок шлейки " +
+                "замість нашийника та наявність адресника з Вашим телефоном");
     }
 }

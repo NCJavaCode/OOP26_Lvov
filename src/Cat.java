@@ -1,28 +1,9 @@
-public class Cat {
-    private String name;
-    private int age;
+public class Cat extends Animal {
     private String colour;
 
     public Cat(String name, int age, String colour) {
-        this.name = name;
-        this.age = age;
+        super(name, "Кіт", age);
         this.colour = colour;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getColour() {
@@ -33,10 +14,15 @@ public class Cat {
         this.colour = colour;
     }
 
+    @Override
     public void showInfo() {
-        System.out.println("Тварина: Кіт");
-        System.out.println("Ім'я: " + name);
-        System.out.println("Вік: " + age);
+        super.showInfo();
         System.out.println("Колір: " + colour);
+    }
+
+    @Override
+    public void showRecommendations() {
+        System.out.println("Рекомендації: Потрібні регулярні консультації та огляд у ветеринара. " +
+                "Обов'язкова наявність спеціальних ігрових комплексів");
     }
 }
