@@ -6,7 +6,15 @@ public class Application {
     public Application(String userName, String animalName, String applicationType) {
         this.userName = userName;
         this.animalName = animalName;
-        this.applicationType = applicationType;
+        setApplicationType(applicationType);
+    }
+
+    public static Application createApplication(String userName, String animalName) {
+        return new Application(userName, animalName, "Усиновлення");
+    }
+
+    public static Application createApplication(String userName, String animalName, String applicationType) {
+        return new Application(userName, animalName, applicationType);
     }
 
     public String getUserName() {
