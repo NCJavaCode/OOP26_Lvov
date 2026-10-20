@@ -14,6 +14,7 @@ public class Rabbit extends Animal {
         this.vaccinated = vaccinated;
     }
 
+    // Реалізація принципу динамічного поліморфізму
     @Override
     public void showInfo() {
         super.showInfo();
@@ -24,6 +25,7 @@ public class Rabbit extends Animal {
         }
     }
 
+    // Реалізація принципу динамічного поліморфізму
     @Override
     public void showRecommendations() {
         System.out.println("Рекомендації: Кролику обов'язково потрібен просторий вольєр та " +

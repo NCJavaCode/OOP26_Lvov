@@ -14,12 +14,14 @@ public class Dog extends Animal {
         this.breed = breed;
     }
 
+    // Реалізація принципу динамічного поліморфізму
     @Override
     public void showInfo() {
         super.showInfo();
         System.out.println("Порода: " + breed);
     }
 
+    // Реалізація принципу динамічного поліморфізму
     @Override
     public void showRecommendations() {
         System.out.println("Рекомендації: Обов'язкові щоденні прогулянки, використання для прогулянок шлейки " +

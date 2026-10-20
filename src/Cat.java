@@ -14,12 +14,14 @@ public class Cat extends Animal {
         this.colour = colour;
     }
 
+    // Реалізація принципу динамічного поліморфізму
     @Override
     public void showInfo() {
         super.showInfo();
         System.out.println("Колір: " + colour);
     }
 
+    // Реалізація принципу динамічного поліморфізму
     @Override
     public void showRecommendations() {
         System.out.println("Рекомендації: Потрібні регулярні консультації та огляд у ветеринара. " +
