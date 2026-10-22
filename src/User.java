@@ -1,7 +1,8 @@
-public class User {
+public class User implements Nameable, Informable {
     private String name;
     private String phone;
     private String email;
+    private String className = "User";
 
     public User(String name, String phone, String email) {
         this.name = name;
@@ -37,6 +38,17 @@ public class User {
         this.email = email;
     }
 
+    @Override
+    public String getClassName() {
+        return className;
+    }
+
+    @Override
+    public void setClassName(String name) {
+        this.className = name;
+    }
+
+    @Override
     public void showInfo() {
         System.out.println("Користувач: " + name);
         System.out.println("Телефон: " + phone);

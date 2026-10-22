@@ -1,7 +1,8 @@
-public class Application {
+public class Application implements Nameable, Informable {
     private String userName;
     private String animalName;
     private String applicationType;
+    private String className = "Application";
 
     public Application(String userName, String animalName, String applicationType) {
         this.userName = userName;
@@ -45,6 +46,17 @@ public class Application {
         }
     }
 
+    @Override
+    public String getClassName() {
+        return className;
+    }
+
+    @Override
+    public void setClassName(String name) {
+        this.className = name;
+    }
+
+    @Override
     public void showInfo() {
         System.out.println("Заявка на " + applicationType + ": користувач " + userName + " обирає тваринку " +
                 "на ім'я " + animalName);
